@@ -1,15 +1,25 @@
-import React from 'react';
+import React, { useEffect }  from 'react';
 import "./Login.css"
 import axios from 'axios'
 import { useDispatch, useSelector } from 'react-redux';
 
-const AddJss = props => {
+const AddJss = (props) => {
     const dispatch = useDispatch();
     const form = useSelector(state => state.form)
     const employees = useSelector(state => state.employee)
 
+    const getEmployees = async () => {
+        const result = await axios.get(`https://miniproject5735512156.herokuapp.com/api/employees`)
+       
+        const action = {type:'GET_EMPLOYEES',employee: result.data}
+        dispatch(action)
+      }
+      useEffect(() => {
+        getEmployees()
+      }, [])
+
     const addEmployee = async () => {
-        await axios.post(`http://localhost/api/employees`, form)
+        await axios.post(`https://miniproject5735512156.herokuapp.com/api/employees`, form)
         dispatch({
             type: 'ADD_EMPLOYEE', employee: {
                 no: employees.length > 0 ? employees[employees.length-1].no+1 : 0,
@@ -18,9 +28,10 @@ const AddJss = props => {
         })
     }
 
+
     return (
-        <div className='form-container'>
-            <h2>Add JSS Network</h2> 
+        <div className='container'>
+            
             <table>
                 <tbody>
                     <tr>
@@ -43,7 +54,7 @@ const AddJss = props => {
                         </td>
                     </tr>
                     <tr>
-                        <td>AGE</td>
+                        <td>Age</td>
                         <td>
                         <input className='inpt'
                                 type="text"
@@ -70,7 +81,7 @@ const AddJss = props => {
                         </td>
                     </tr>
                     <tr>
-                        <td>Tel</td>
+                        <td>Phone number</td>
                         <td>
                         <input className='inpt'
                                 type="text"
@@ -79,9 +90,19 @@ const AddJss = props => {
                         </td>
                     </tr>
                     <tr>
+                        <td>Status</td>
+                        <td>
+                        <input className='inpt'
+                                type="text"
+                                onChange={(e) => dispatch({ type: 'CHANGE_STATUS', status: e.target.value })}
+                        />   
+                        </td>
+                    </tr>
+                    <tr>
                         <td></td>
                         <td>
                             <button className='btn' onClick ={addEmployee}>Add</button>
+                            
                         </td>
                     </tr>
                 </tbody>
