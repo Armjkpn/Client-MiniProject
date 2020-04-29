@@ -1,33 +1,20 @@
 import React, { Component } from 'react';
-import fire from '../firebase/Conf';
-import Admin from './Admin';
 import {BrowserRouter as Router,Switch,Route } from 'react-router-dom';
-import Nav   from './Navbar';
+import Nav   from './MainNav';
+import StaffList from './List'
+import AddJss from './AddJss'
 
 class Main extends Component {
-    constructor(props) {
-        super(props);
-        this.logout = this.logout.bind(this);
-    }
-
-
-    logout() {
-        fire.auth().signOut();
-    }
 
     render() {
         return (
         <Router>
-        <form>
-        <div className="">
+        <div>
         <Nav />
-        <Switch>
-        <Route   path="/Admin" exact component={Admin}/>
-        <botton onClick={this.logout} style={{marginLeft: '25px'}} class="btn btn-danger" >Logout</botton>
-        </Switch>
-        
+        <h2>JSS Network Family</h2>
+        <StaffList/>  
+        <AddJss/>
         </div>
-        </form>  
         </Router>
         );
     }
