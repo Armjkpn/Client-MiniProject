@@ -1,34 +1,176 @@
 .login {
     display: flex;
-    padding: 400px;
+    padding: 180px;
     /* justify-items: center; */
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;
     text-align: center;
-    background-image: url("https://www.onlygfx.com/wp-content/uploads/2018/01/red-watercolor-background-1-1024x1024.jpg");
+    background-image: url("https://www.onlygfx.com/wp-content/uploads/2018/03/turquoise-marbling-texture-3-1024x956.jpeg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 1100px 900px;
+    background-size: 100%;
   }
   .login2 {
-    background-color: #ffffff;
+    background-image: url("https://www.onlygfx.com/wp-content/uploads/2018/09/6-grey-cloud-graphite-drawing-background-2-1024x716.jpg");
     /* background: #fff; */
-  
-    border-radius: 10px;
+
+    border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
     /* border: 5px solid; */
-    padding: 40px;
+    padding: 10px;
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 30px;
   }
+  .login3 {
+    background-image: url("https://www.onlygfx.com/wp-content/uploads/2018/04/turquoise-green-watercolor-brush-stroke-4.png");
+    background-position: center;
+  }
+
   .login2 .form-control {
     position: relative;
-    font-size: 16px;
+    font-size: 20px;
     height: auto;
-    padding: 10px;
+    padding: 5px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
+  .login2 .form-control2 {
+    position: relative;
+    font-size: 15px;
+    height: auto;
+    padding: 5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: rgb(57, 130, 226);
+  }
+  .login2 .form-control3 {
+    position: relative;
+    font-size: 15px;
+    height: auto;
+    padding: 5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: rgb(209, 72, 118);
+  }
+  .bearlist-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.bearcard-container {
+  width: 160px;
+  border-radius: 4px;
+  box-shadow: 0 0 6px 0 rgba(0,0,0,.15);
+  overflow: hidden;
+}
+
+.bearcard {
+height: 200px;
+
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+
+position: relative;
+}
+
+.bearcard-name {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+
+  text-align: center;
+  padding: 4px;
+  margin: 0;
+  background-color: rgba(0,0,0,.60);
+  color: white;
+}
+
+.bearcard-weight {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  margin: 0;
+  
+  display: inline;
+  padding: 4px;
+  font-weight: bold;
+  background-color: rgba(255,255,255,.60);
+  color: rgb(252, 164, 0);
+}
+
+.bearcard-actions {
+  background-color: white;
+  display: flex;
+}
+
+.bearcard-actions > div {
+  flex: 1;
+  padding: 4px;
+  text-align: center;
+  font-size: .8em;
+  cursor: pointer;
+  transition: background-color .2s ease-in;
+}
+
+.bearcard-actions > div:hover {
+  background-color: rgb(255, 220, 154);
+}
+.inpt {
+  padding: 4px;
+  border: 1px solid #cecece;
+  border-radius: 2px;
+}
+
+.btn {
+  
+  padding: 4px 8px;
+  border: none;
+  border-radius: 2px;
+  color: black;
+  cursor: pointer;
+  transition: background-color .1s ease-in;
+}
+
+.btn:hover {
+  background-color: rgb(161, 161, 161);
+  color: black;
+}
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 15vh;
+  background-color: rgb(159, 211, 235);
+  color: rgb(253, 253, 253);
+}
+
+.nav-links{
+  width: 24%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+} 
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* border-radius: 4px;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.15);
+  overflow: hidden; */
+}
+
+.card {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
